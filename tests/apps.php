@@ -41,8 +41,8 @@ function getSubclasses($parentClassName) {
 $apps = OC_App::getEnabledApps();
 
 foreach ($apps as $app) {
-	// skip files_external, it has its own test suite
-	if ($app === 'files_external') {
+	// only run tests for files_sharing
+	if ($app !== 'files_sharing') {
 		continue;
 	}
 	$dir = OC_App::getAppPath($app);
