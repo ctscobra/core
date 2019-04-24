@@ -45,9 +45,6 @@ foreach ($apps as $app) {
 	if ($app === 'comments') {
 		continue;
 	}
-	if ($app === 'dav') {
-		continue;
-	}
 	if ($app === 'federatedfilesharing') {
 		continue;
 	}
