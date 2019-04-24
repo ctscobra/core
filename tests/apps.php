@@ -42,6 +42,21 @@ $apps = OC_App::getEnabledApps();
 
 foreach ($apps as $app) {
 	// skip files_external, it has its own test suite
+	if ($app === 'comments') {
+		continue;
+	}
+	if ($app === 'dav') {
+		continue;
+	}
+	if ($app === 'federatedfilesharing') {
+		continue;
+	}
+	if ($app === 'federation') {
+		continue;
+	}
+	if ($app === 'files') {
+		continue;
+	}
 	if ($app === 'files_external') {
 		continue;
 	}
